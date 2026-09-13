@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="한 장의 사진과 한 줄의 설명으로 감각적인 영상을 만드는 GPT 기반 AI 스튜디오" />
+  <title>모션프레임 — 사진이 영상이 되는 순간</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%230d0d12'/%3E%3Cpath d='M19 17h26v30H19z' fill='none' stroke='%23ff5d3b' stroke-width='5'/%3E%3Cpath d='m29 25 12 7-12 7z' fill='%23f5f3ee'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="모션프레임 홈"><span class="brand-mark">M</span><span>모션프레임</span></a>
+    <nav aria-label="주요 메뉴"><a href="#studio">스튜디오</a><a href="#gallery">영감</a><a href="#how">사용법</a></nav>
+    <button class="header-cta" data-scroll="#studio">무료로 만들기</button>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <video class="hero-video" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=85">
+        <source src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-city-traffic-at-night-11-large.mp4" type="video/mp4">
+      </video>
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="eyebrow"><span></span> GPT 기반 AI 영상 스튜디오</p>
+        <h1 id="hero-title">멈춰 있던 사진에<br><em>장면을 입히세요.</em></h1>
+        <p class="hero-copy">사진 한 장과 짧은 문장만 있으면 충분해요.<br>상상한 움직임을 몇 분 안에 영상으로 만들어보세요.</p>
+        <button class="primary-cta" data-scroll="#studio">지금 영상 만들기 <span>↗</span></button>
+      </div>
+      <div class="hero-meta"><span>SCROLL TO CREATE</span><span>01 — 04</span></div>
+    </section>
+
+    <section class="studio-section" id="studio" aria-labelledby="studio-title">
+      <div class="section-heading"><div><p class="kicker">AI CREATION STUDIO</p><h2 id="studio-title">상상을 입력하면,<br>장면이 시작됩니다.</h2></div><p>복잡한 편집 없이 사진과 텍스트만으로<br>나만의 짧은 영상을 만들어보세요.</p></div>
+      <div class="studio-grid">
+        <div class="upload-panel">
+          <div class="panel-top"><span>01</span><strong>사진 선택</strong></div>
+          <label class="drop-zone" id="dropZone">
+            <input type="file" id="fileInput" accept="image/*" hidden>
+            <img id="previewImage" alt="선택한 사진 미리보기">
+            <div class="drop-copy" id="dropCopy"><span class="upload-icon">＋</span><strong>사진을 끌어다 놓거나 선택하세요</strong><small>JPG, PNG · 최대 10MB</small></div>
+          </label>
+          <button class="text-button" id="chooseButton">내 사진 선택하기 <span>→</span></button>
+        </div>
+        <div class="prompt-panel">
+          <div class="panel-top"><span>02</span><strong>움직임 설명</strong></div>
+          <textarea id="prompt" maxlength="140" placeholder="예: 바람에 머리카락이 천천히 날리고, 카메라가 인물 쪽으로 부드럽게 다가가요."></textarea>
+          <div class="char-count"><span id="charCount">0</span>/140</div>
+          <div class="style-row"><span>분위기</span><div class="chips" role="group" aria-label="영상 분위기"><button class="chip active">시네마틱</button><button class="chip">빈티지</button><button class="chip">몽환적</button><button class="chip">자연스러운</button></div></div>
+          <button class="generate-button" id="generateButton"><span>영상 생성하기</span><span>✦</span></button>
+          <p class="notice" id="notice">무료 체험에서는 5초 영상을 생성할 수 있어요.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery-section" id="gallery" aria-labelledby="gallery-title">
+      <div class="gallery-head"><div><p class="kicker">MADE WITH MOTIONFRAME</p><h2 id="gallery-title">한 장에서 시작된 이야기</h2></div><p>사진 속 공기와 표정, 빛의 방향까지.<br>원하는 감정을 움직임으로 표현해보세요.</p></div>
+      <div class="gallery-grid">
+        <article class="story-card tall"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=88" alt="안개 낀 산과 숲 풍경"><span class="card-no">01</span><div class="card-caption"><strong>새벽의 호흡</strong><span>시네마틱 · 5초</span></div></article>
+        <article class="story-card"><img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1000&q=88" alt="별이 빛나는 설산"><span class="card-no">02</span><div class="card-caption"><strong>별이 흐르는 밤</strong><span>몽환적 · 5초</span></div></article>
+        <article class="story-card"><img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1000&q=88" alt="빛이 스며드는 깊은 숲"><span class="card-no">03</span><div class="card-caption"><strong>초록의 파동</strong><span>자연스러운 · 5초</span></div></article>
+      </div>
+    </section>
+
+    <section class="how-section" id="how" aria-labelledby="how-title">
+      <p class="kicker">THREE SIMPLE STEPS</p><h2 id="how-title">생각보다 더 간단하게</h2>
+      <div class="steps"><article><span>01</span><h3>사진을 올려주세요</h3><p>움직임을 더하고 싶은<br>사진 한 장을 선택하세요.</p></article><article><span>02</span><h3>장면을 설명하세요</h3><p>GPT가 문장을 이해하고<br>자연스러운 연출로 바꿔요.</p></article><article><span>03</span><h3>영상을 만나보세요</h3><p>생성된 영상을 미리 보고<br>간편하게 저장하세요.</p></article></div>
+    </section>
+  </main>
+  <footer><a class="brand" href="#top"><span class="brand-mark">M</span><span>모션프레임</span></a><p>당신의 사진, 다음 장면으로.</p><span>© 2026 MOTIONFRAME</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
